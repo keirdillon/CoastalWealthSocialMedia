@@ -1,21 +1,20 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import Head from "next/head";
 
-// ─── COASTAL PRECISION DESIGN TOKENS ───
+// ─── COASTAL PRECISION DESIGN TOKENS v6 ───
 const C = {
-  navy900: "#0A1628", navy800: "#0F2240", navy700: "#152E54", navy600: "#1B3A68", navy500: "#234B82",
-  teal500: "#2AB5A0", teal400: "#3CC9B4", teal300: "#6ED9CA", teal200: "#A5E8DF", teal100: "#D6F5F0",
-  sand100: "#FAF8F5", sand200: "#F3EFE9", sand300: "#E8E2D8", sand400: "#D4CBBE", sand500: "#B8AD9E",
-  gray50: "#FAFAFA", gray100: "#F5F5F5", gray200: "#EEEEEE", gray300: "#D4D4D4", gray400: "#A3A3A3",
+  navy900: "#252f4a", navy800: "#3c506f", navy700: "#5d7fa0", navy600: "#6b95ba", navy500: "#6b95ba",
+  teal500: "#6b95ba", teal400: "#89adc8", teal300: "#a7c4d8", teal200: "#c9dce8", teal100: "#e8f0f5",
+  sand100: "#faf7f2", sand200: "#f3ede4", sand300: "#e5ddd0", sand400: "#d1c5b4", sand500: "#b5a895",
+  gray50: "#FAFAFA", gray100: "#F5F5F5", gray200: "#e8e8e8", gray300: "#D4D4D4", gray400: "#A3A3A3",
   gray500: "#737373", gray600: "#525252",
   white: "#FFFFFF",
   success: "#22C55E", warning: "#F59E0B", error: "#EF4444",
-  shadowSm: "0 1px 2px rgba(10,22,40,0.04)",
-  shadowMd: "0 4px 16px rgba(10,22,40,0.06)",
-  shadowLg: "0 12px 40px rgba(10,22,40,0.08)",
+  shadowSm: "0 1px 3px rgba(37,47,74,0.04)",
+  shadowMd: "0 4px 16px rgba(37,47,74,0.06)",
+  shadowLg: "0 12px 40px rgba(37,47,74,0.08)",
 };
-const serif = "'DM Serif Display', Georgia, 'Times New Roman', serif";
+const serif = "'Playfair Display', Georgia, serif";
 const sans = "'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
 
 // ─── CHEVRON ICON ───
@@ -49,7 +48,7 @@ const Callout = ({ title, children, variant = "sand" }) => {
   return (
     <div style={{
       padding: "24px 28px", borderRadius: 20, background: bg, border: `1px solid ${border}`, marginBottom: 16,
-      ...(variant === "navy" ? { backgroundImage: `radial-gradient(ellipse at top right, rgba(42,181,160,0.12) 0%, transparent 60%)` } : {}),
+      ...(variant === "navy" ? { backgroundImage: `radial-gradient(ellipse at top right, rgba(107,149,186,0.15) 0%, transparent 60%)` } : {}),
     }}>
       {title && <Overline color={labelColor}>{title}</Overline>}
       <div style={{ fontSize: 15, color: textColor, lineHeight: 1.65 }}>
@@ -158,11 +157,11 @@ export default function SocialPlaybook() {
   return (
     <div style={{ minHeight: "100vh", background: C.white, fontFamily: sans, color: C.navy900 }}>
       <Head>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
       </Head>
 
       {/* ─── HERO HEADER ─── */}
-      <div style={{ background: C.navy900, backgroundImage: `radial-gradient(ellipse at top right, rgba(42,181,160,0.12) 0%, transparent 60%)`, padding: "44px 24px 32px" }}>
+      <div style={{ background: C.navy900, backgroundImage: `radial-gradient(ellipse at top right, rgba(107,149,186,0.15) 0%, transparent 60%)`, padding: "44px 24px 32px" }}>
         <div style={{ maxWidth: 960, margin: "0 auto" }}>
           <Overline color={C.teal400}>COASTAL WEALTH</Overline>
           <h1 style={{ margin: 0, fontFamily: serif, fontSize: 38, fontWeight: 400, color: C.white, lineHeight: 1.08, letterSpacing: "-0.02em" }}>
@@ -496,7 +495,7 @@ export default function SocialPlaybook() {
               "Your illustration makes the one idea tangible.",
               "Your teach delivers the one actionable insight from the one idea.",
             ]} />
-            <div style={{ marginTop: 12, padding: "12px 16px", background: "rgba(10,22,40,0.04)", borderRadius: 12, fontSize: 14, color: C.gray600, lineHeight: 1.55 }}>
+            <div style={{ marginTop: 12, padding: "12px 16px", background: "rgba(37,47,74,0.04)", borderRadius: 12, fontSize: 14, color: C.gray600, lineHeight: 1.55 }}>
               <strong style={{ color: C.error }}>Common mistake:</strong> Creators try to make one video solving 15 pains instead of providing 15 solutions to one pain. Flip it. One pain. Fifteen videos.
             </div>
           </Callout>
