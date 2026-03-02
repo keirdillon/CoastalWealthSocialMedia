@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Head from "next/head";
 
 // ─── COASTAL PRECISION DESIGN TOKENS ───
 const C = {
@@ -155,7 +156,9 @@ export default function SocialPlaybook() {
 
   return (
     <div style={{ minHeight: "100vh", background: C.white, fontFamily: sans, color: C.navy900 }}>
-      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+      <Head>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+      </Head>
 
       {/* ─── HERO HEADER ─── */}
       <div style={{ background: C.navy900, backgroundImage: `radial-gradient(ellipse at top right, rgba(42,181,160,0.12) 0%, transparent 60%)`, padding: "44px 24px 32px" }}>
