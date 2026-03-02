@@ -1,5 +1,5 @@
-import Playbook from '../CoastalWealth_Social_Media_Playbook'
+import CoastalSocialMediaPlaybook from "../components/CoastalSocialMediaPlaybook";
 
 export default function Home() {
-  return <Playbook />
+  return <CoastalSocialMediaPlaybook />;
 }
